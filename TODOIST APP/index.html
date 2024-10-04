@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="todo.css">
+  
+</head>
+
+<body>
+  <div class="container"  >
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 "    >
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        
+        <span class="fs-4 " style="color: #e34432; font-weight:700; font-size: 90px; ">
+          <img src="https://static-00.iconduck.com/assets.00/todoist-icon-2048x2048-6xd8pwo3.png" alt=""
+            style="width: 30px; height: 30px;">
+
+          todoist</span>
+      </a>
+
+      <ul class="nav nav-pills">
+
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item" id="for-teams"><a href="#" class="nav-link">For Teams</a></li>
+        <div class="dropdown">
+          <button id="resources" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Resources
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-ticket" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z" />
+                </svg>
+                Integrations
+                <p style="color:rgb(109, 102, 102); margin-left:32px ;">Connect Todoist with your other tools</p>
+              </a></li>
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-twitch" viewBox="0 0 16 16">
+                  <path
+                    d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z" />
+                  <path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z" />
+                </svg>
+
+                Templates
+                <p style="color:rgb(109, 102, 102); margin-left: 32px;">Kickstart projects with curated templates</p>
+              </a></li>
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                  <path
+                    d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z" />
+                </svg>
+
+                Getting Started
+                <p style="color:rgb(109, 102, 102);  margin-left: 32px;">Get up and running in minutes</p>
+              </a></li>
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-radioactive" viewBox="0 0 16 16">
+                  <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8" />
+                  <path
+                    d="M9.653 5.496A3 3 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.97 5.97 0 0 1 8 2c1.222 0 2.358.365 3.306.992zm1.342 2.324a3 3 0 0 1-.884 2.312 3 3 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a6 6 0 0 0 1.767-4.624zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+                </svg>
+
+                Help Center
+                <p style="color:rgb(109, 102, 102);  margin-left: 32px;">Find answers to all your questions</p>
+              </a></li>
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-question" viewBox="0 0 16 16">
+                  <path
+                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
+                </svg>
+                Productivity Methods + Quiz
+                <p style="color:rgb(109, 102, 102) ; margin-left: 32px;">Discover which method fits you best</p>
+              </a></li>
+            <li><a class="dropdown-item" href="#" style="font-weight: 600;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="rgb(109, 102, 102)"
+                  class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                </svg>
+
+                Inspiration Hub
+                <p style="color:rgb(109, 102, 102) ;  margin-left: 32px;">Productivity advice and Todoist tips</p>
+              </a></li>
+          </ul>
+        </div>
+        <li class="nav-item price"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+        <li class="nav-item start"><a href="#" class="nav-link"
+            style="color: rgb(243, 243, 243); font-weight: bolder;">Start For Free</a></li>
+      </ul>
+    </header>
+  </div>
+
+
+
+
+
+
+
+  <div class="px-4 py-5 my-5 text-center">
+
+    <h1 class="display-5 fw-bold text-body-emphasis" style="font-weight: 630px; font-size: 70px; ">Organize your work
+      <br><span>and life, finally.</span></h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" style="color:rgb(149, 143, 143); font-weight: 600; ">Simplify life for both you and your
+        team. The world’s #1 task <br><span> manager and to-do list app</span></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="hd-btn  btn btn-primary btn-lg px-2 gap-3"
+          style="background-color: #e34432; height: 65px; width: 150px;
+        text-align:center; border-radius: 20px; border-color: #e34432; border-bottom: 7px solid rgb(238, 169, 143); font-weight: bold;">Start for free</button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="big-img" style="padding-left: 80px; padding-right: 60px; padding-bottom: 50px;">
+    <img
+      src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fwide%2Fheaderui.en.png"
+      style="width: 1300px; height: 690px;  background: url('https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fbackground.png');">
+  </div>
+  <br>
+
+
+
+
+
+
+
+  <div class="card-group" style="padding-bottom: 200px;">
+    <div class="card" style="border: none; border-right: 1px solid rgb(169, 167, 167);">
+      <div class="card-body" style="padding-left: 100px;">
+
+        <p class="card-text">“Simple, straightforward,
+          <br><span>and super powerful”</span>
+        </p><br><br>
+        <img
+          src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/the-verge_gdh1dw.png"
+          alt="the-verge customer logo" width="92" height="16" loading="lazy" style="margin-left: 40px;">
+      </div>
+    </div>
+    <div class="card" style="border: none; border-right: 1px solid rgb(169, 167, 167);">
+      <div class="card-body" style="padding-left: 100px;">
+
+        <p class="card-text">“Simply a joy to use”</p><br><br><br>
+        <img
+          src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/wirecutter_blf8c5.png"
+          alt="wirecutter customer logo" width="139" height="18" loading="lazy">
+      </div>
+    </div>
+    <div class="card" style="border: none; border-right: 1px solid rgb(169, 167, 167);">
+      <div class="card-body" style="padding-left: 100px;">
+
+        <p class="card-text">“The best to-do list app
+          <br><span>on the market”</span>
+        </p><br><br>
+        <img
+          src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/pc-mag_ak9mna.png"
+          alt="pc-mag customer logo" width="30" height="40" loading="lazy" style="margin-left: 70px;">
+      </div>
+    </div>
+    <div class="card" style="border: none;">
+      <div class="card-body" style="padding-left: 100px;">
+
+        <p class="card-text">“Nothing short of stellar”</p><br><br><br>
+        <img
+          src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/techradar_qt0nt6.png"
+          alt="techradar customer logo" width="120" height="18" loading="lazy" style="margin-left: 40px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="section">
+    <div class="section-body" style="margin-left: 150px;">
+      <div class="section-text">
+
+      </div>
+    </div>
+    <div class="section-img">
+      <div class="section-img-inner" style="background-image: url(); margin-left: 700px; "></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-body" style="margin-left: 150px;">
+      <div class="section-text">
+        <h5 style="color: rgb(234, 122, 18);">Clear Your Mind</h5><br>
+        <h1 style="font-weight: bold;">The Fatest Way to get <br><span>Tasks out of Your Head</span> </h1><br>
+        <p style="font-size: 20px; color: grey; font-weight: 500;">Type just about anything into the task field
+          and<br><span>Todoist’s one-of-its-kind natural language</span><br>recognition will instantly fill your to-do
+          list.</p><br><br><br><br><br><br>
+      </div>
+    </div>
+    <div class="section-img">
+      <div class="section-img-inner"
+        style="background-image: url(https://i.pinimg.com/originals/ba/82/d8/ba82d842c988f7e64c3b75e9c568f0ea.gif); margin-left: 700px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-body" style="margin-left: 150px;">
+      <div class="section-text">
+        <h5 style="color: rgb(16, 117, 171);">Focus on what’s important</h5><br>
+        <h1 style="font-weight: bold;">Reach that mental clarity <br><span>you’ve been longing for.</span></h1><br>
+        <p style="font-size: 20px; color: grey; font-weight: 500;">Your tasks are automatically sorted into Today,
+          <br><span>Upcoming, and custom filter views to help you</span><br>prioritize your most important work.</p>
+        <br><br><br><br><br><br>
+      </div>
+    </div>
+    <div class="section-img">
+      <div class="section-img-inner"
+        style="background-image: url(https://cdn.dribbble.com/users/12258/screenshots/4345626/td-favorites3.gif); margin-left: 700px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-body" style="margin-left: 150px;">
+      <div class="section-text">
+        <h5 style="color: rgb(14, 131, 69);">Organize your teamwork, too</h5><br>
+        <h1 style="font-weight: bold;">Where all your tasks<br><span>can finally coexist.</span></h1><br>
+        <p style="font-size: 20px; color: grey; font-weight: 500;">Give your team a shared space to collaborate
+          and<br><span>stay on top of it all – alongside but separate from</span><br>your personal tasks and projects.
+        </p><br>
+        <a href="#" id="link" style="text-decoration: none; font-size: larger; color: rgb(35, 35, 193);">Learn more
+          about teams ></a>
+      </div>
+    </div>
+    <div class="section-img">
+      <div class="section-img-inner"
+        style="background-image: url(https://app.taskbone.com/_app/immutable/assets/sync1.ad422c12.gif); margin-left: 700px;"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-body" style="margin-left: 150px;">
+      <div class="section-text">
+
+      </div>
+    </div>
+    <div class="section-img">
+      <div class="section-img-inner" style="background-image: url(); margin-left: 700px;"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="px-4 py-5 my-5 text-center">
+
+    <h1 class="display-5 fw-bold text-body-emphasis">“Todoist makes it easy to go as <br><span>simple or as complex as
+        you want”</span></h1>
+    <div class="col-lg-6 mx-auto">
+      <br>
+      <h3 class="lead mb-4" style="font-size: 30px; font-weight: bold;">– The Verge </h3>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+        <button type="button" class="btn btn-outline-secondary " style="width: 80px; height: 40px; margin-top: 80px; border: none;
+        background-color: rgb(227, 224, 224);">Simple</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+
+     
+
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"></h1>
+        <!-- <svg style="margin-right: 500px; color:red"   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+        </svg><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2-50TWUd2nlZdUjX0CzeWMjsAsw-QQPOeqQFizZfOrVdU0GvuG5ePyAuoHfNxddZ1Ccw&usqp=CAU" alt="" height="150" width="60" style="margin-right: 70px;"> -->
+
+        <ul class="lead" style="list-style-type: none;">
+          <li style="font-weight: 400;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+          </svg> Add a task</li><br>
+          <li style="font-weight: 400;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-voicemail" viewBox="0 0 16 16">
+            <path d="M7 8.5A3.5 3.5 0 0 1 5.95 11h4.1a3.5 3.5 0 1 1 2.45 1h-9A3.5 3.5 0 1 1 7 8.5m-6 0a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0m14 0a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/>
+          </svg> Give it a due date</li><br>
+          <li style="font-weight: 400;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"/>
+            <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"/>
+            <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"/>
+          </svg>  Schedule a reminde</li><br>
+          <li style="font-weight: 400;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag" viewBox="0 0 16 16">
+            <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21 21 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21 21 0 0 0 14 7.655V1.222z"/>
+          </svg>  Give tasks a priority level</li><br>
+          <li style="font-weight: 400;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+          </svg>  Complete the task</li><br>
+
+        </ul>
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          
+        </div> -->
+      </div>
+
+
+      <!-- <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+        </svg>
+      </div> -->
+
+      <div class="col-10 col-sm-8 col-lg-6">
+        <video style="padding-left: 5px; " src="todo vdo.webm" alt="img" height="450px" width="450px" loop autoplay controls
+          muted>
+      </div>
+
+      
+    </div>
+  </div><br>
+
+
+
+  <div class="px-4 py-5 my-5 text-center">
+    
+    <h6 class="display-5 fw-bold text-body-emphasis" style="font-size: 35px; color: rgb(46, 45, 45);">Explore all Todoist has to offer</h6><br><br>
+    <div class="card-group" style="gap: 10px; margin-left: 150px; margin-right: 150px;">
+      <div class="card" >
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_128/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fexplore%2Ffeatures.png" class="card-img-top" alt="..." height="200" width="50">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 17px; color: rgb(48, 48, 48);">Features</h5>
+        </div>
+      </div>
+      <div class="card" style="border-left: 1px solid rgb(203, 200, 200); border-radius: 6px;">
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_128/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fexplore%2Ftemplates.png" class="card-img-top" alt="..." height="200" width="50">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 17px; color: rgb(48, 48, 48);">Template Gallery</h5>
+        </div>
+      </div>
+      <div class="card" style="border-left: 1px solid rgb(203, 200, 200); border-radius: 6px;">
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_128/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fexplore%2Fprod-quiz.png" class="card-img-top" alt="..." height="200" width="50">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 17px; color: rgb(48, 48, 48);">Productivity Quiz</h5>
+        </div>
+      </div>
+      <div class="card" style="border-left: 1px solid rgb(203, 200, 200); border-radius: 6px;">
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_128/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fexplore%2Fextensions.png" class="card-img-top" alt="..." height="200" width="50">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 17px; color: rgb(48, 48, 48);">Extension Gallery</h5>
+        </div>
+      </div>
+      <div class="card" style="border-left: 1px solid rgb(203, 200, 200); border-radius: 6px;">
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_128/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fexplore%2Finspiration.png" class="card-img-top" alt="..." height="200" width="50">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 17px; color: rgb(48, 48, 48);">Inspiration Hub</h5>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <div class="wrapper">
+          <div  class="item item1"><img style="height: 200px; width: 200px; margin: 60px; margin-left: 300px; margin-bottom: 20px;" src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-1.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">1+ Millions <br><span style="color: gray; font-size: 17px; font-weight: 500;">Pro users</span></h5></div>
+          <div  class="item item2"><img style="height: 200px; width: 200px; margin: 60px;  margin-left: 300px; margin-bottom: 20px;" src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-3.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">160+ countries <br><span style="color: gray; font-size: 17px; font-weight: 500;">Worldwide</span></h5></div>
+          <div  class="item item3"><img style="height: 200px; width: 200px; margin: 60px;  margin-left: 300px; margin-bottom: 20px;"  src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-4.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">2+ Millions <br><span style="color: gray; font-size: 17px; font-weight: 500;">Tasks Completed</span></h5></div>
+          <div  class="item item4"><img style="height: 200px; width: 200px; margin: 60px;  margin-left: 300px; margin-bottom: 20px;" src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-2.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">30+ Millions <br><span style="color: gray; font-size: 17px; font-weight: 500;">App Downloads</span></h5></div>
+          <div  class="item item5"><img style="height: 200px; width: 200px; margin: 60px;  margin-left: 300px; margin-bottom: 20px;" src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-4.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">1+ Millions <br><span style="color: gray; font-size: 17px; font-weight: 500;">Pro users</span></h5></div>
+          <div  class="item item6"><img style="height: 200px; width: 200px; margin: 60px;  margin-left: 300px; margin-bottom: 20px;"  src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-3.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px; font-weight: bold;">2+ Millions <br><span style="color: gray; font-size: 17px; font-weight: 500;">Tasks Completed</span></h5></div>
+          <!-- <div  class="item item7"><img style="height: 200px; width: 200px; margin-left: 20px;"  src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-1.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px;">title</h5></div>
+          <div  class="item item8"><img style="height: 200px; width: 200px; margin-left: 20px;"  src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_360/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fstats%2Fstat-box-4.png" alt=""><h5 style="margin-left: 160px; margin-top: 20px;">title</h5></div> -->
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-lg-6">
+        <h5 style="font-weight: 500;color: #e34432;">In it for the long haul</h5><br>
+        <h1 class="display-5  text-body-emphasis lh-1 mb-3" style="font-size: 40px; font-weight: 650;">A task manager you <br><span>can trust for life</span></h1><br>
+        <p class="lead" style="font-weight: 450; color: rgb(104, 104, 104);">We’ve been building Todoist for 17 years and 192 days. Rest assured that we’ll never sell out to the highest bidder.</p><br>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+         <h5 id="long-term" style="color: rgb(70, 70, 144); font-weight: 500;"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+        </svg><span style="margin-left: 10px;">Read about our long-term mission</span></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="px-4 py-5 my-5 text-center" style="margin-top: 500px; background-image: linear-gradient(180deg,white,#ebdad0);
+  ">
+    <h1 class="display-5 fw-bold text-body-emphasis">Gain calmness and clarity with the <br><span> world’s most beloved productivity app</span></h1><br>
+    <div class="col-lg-6 mx-auto">
+      <h5 class="lead mb-4" style="color: gray; font-size: 19px; font-weight: 500;" >374000+ ★★★★★ reviews on Google Play and App Store</h5><br>
+      <div class="d-grid gap-2 d-sm-grid justify-content-sm-center">
+        <button type="button" class="hd-btn  btn btn-primary btn-lg px-2 gap-3"
+          style="background-color: #e34432; height: 65px; width: 150px;
+        text-align:center; border-radius: 20px; border-color: #e34432; border-bottom: 7px solid rgb(238, 169, 143); font-weight: bold;">Start for free</button>
+        <br><h5 id="dnld-app" > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+        </svg>     <span style="margin-left: 5px;" >Download apps</span></h5>
+      </div>
+    </div>
+
+
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"  >
+    <div class="col mb-3" >
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <span class="fs-4 " style="color: black; font-weight:700; font-size: 90px;  margin-left: 45px;">
+          <img src="https://static-00.iconduck.com/assets.00/todoist-icon-512x512-f1azavdk.png" alt=""
+            style="width: 30px; height: 30px;">
+
+          todoist</span>
+      </a>
+      <p class="text-body-secondary" style="margin-left: 10px;">Join millions of people who  <br><span style="margin-left: 8px;"> organize work and life with Todoist.</span> </p>
+    </div>
+
+    <!-- <div class="col mb-3">
+
+    </div> -->
+
+    <div class="col mb-3">
+      <h5>Features</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary " style="margin-left: 30px;">How It Works</a></li>
+        <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-body-secondary " style="margin-left: 8px;">For Teams</a></li>
+        <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-body-secondary " style="margin-left: -14px;">Pricing</a></li>
+        <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-body-secondary " style="margin-left: 5.5px;">Templates</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Resources</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: 30px;">Download Apps</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: 65px;">Productivity Methods</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Integrations</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: 36px;">Channel Partners</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: 18px;">Developer API</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: -40px;">Status</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Company</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: -11px;">About Us</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: -25px;">Careers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: 40px;">Inspiration Hub</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: -34px;">Press</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" style="margin-left: -34px;">Twist</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg></a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg></a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg></a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg></a></li>
+       
+      </ul>
+    </div>
+  </footer>
+
+
+
+
+
+  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <p   style="font-size: 14px; color: gray;"> <span class="secu">Security</span> | <span class="secu">Privacy</span> | <span class="secu">Terms</span>     © Doist Inc.</p>
+    <ul class="list-unstyled d-flex">
+      <div class="dropup-center dropup">
+        <button id="last-btn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+          </svg></span>  English
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item languages" href="#">Cestina</a></li>
+          <li><a class="dropdown-item languages" href="#">Dansk</a></li>
+          <li><a class="dropdown-item languages" href="#">Deutch</a></li>
+          <li><a class="dropdown-item languages" href="#">English</a></li>
+          <li><a class="dropdown-item languages" href="#">Espanol</a></li>
+          <li><a class="dropdown-item languages" href="#">Suomi</a></li>
+          <li><a class="dropdown-item languages" href="#">Francais</a></li>
+          <li><a class="dropdown-item languages" href="#">Italiano</a></li>
+          <li><a class="dropdown-item languages" href="#">ビジネス</a></li>
+          <li><a class="dropdown-item languages" href="#">ビジネス</a></li>
+          <li><a class="dropdown-item languages" href="#">Norsk</a></li>
+          <li><a class="dropdown-item languages" href="#">Nederlands</a></li>
+          <li><a class="dropdown-item languages" href="#">Polski</a></li>
+          <li><a class="dropdown-item languages" href="#">Portugues(Brazil)</a></li>
+          <li><a class="dropdown-item languages" href="#">Pyccknn(Russian)</a></li>
+          <li><a class="dropdown-item languages" href="#">Svenska</a></li>
+          <li><a class="dropdown-item languages" href="#">Turkce</a></li>
+          <li><a class="dropdown-item languages" href="#">ビジネス</a></li>
+          <li><a class="dropdown-item languages" href="#">ビジネス</a></li>
+          
+
+        </ul>
+      </div>
+    </ul>
+  </div>
+
+
+
+  </div>
+
+  
+
+
+
+
+
+  <script src="https://code.jquery.com//jquery-3.5.1.js"></script>
+  <script>
+    $(window).scroll(function () {
+      let o = $(window), i = $("body"), t = $(".section"), s = o.scrollTop() + o.height() / 3;
+      t.each(function () {
+        $(this).position().top <= s && $(this).position().top + $(this).height() > s && (i.removeClass(function (o, i) {
+          return i.match(/(^|\s)color-\s+/g)||[].join(" ")}
+        ), $(".section").removeClass("active"), $(this).addClass("active"))}
+      )}
+    ).scroll();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
